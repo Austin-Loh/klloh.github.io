@@ -1,0 +1,287 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Daily Monitoring</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+<style>
+a {font-size: 26px;}
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Health / Treasury / STTAS</h1>
+        <div class="container">
+            <h3>Azure AD Connect</h3>
+            <div>
+                <div>
+                    <button class="btn btn-warning btn-lg m-2" onclick="openAzureAD_DoTAF()">DoTAF</button>
+                    <button class="btn btn-warning btn-lg m-2" onclick="openAzureAD_STTAS()">STTAS</button>
+                </div>
+                <div>
+                    <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_Azure_ADHybridHealth/AadHealthMenuBlade/SyncErros" target="_blank" role="button">Sync Errors</a>
+                    <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_Azure_ADHybridHealth/AadHealthMenuBlade/SyncServicesList" target="_blank" role="button">Sync Services</a>    
+                    <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_Azure_ADHybridHealth/AadHealthMenuBlade/AdfsServicesList" target="_blank" role="button">AD FS</a>
+                    <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_Azure_ADHybridHealth/AadHealthMenuBlade/AddsServicesList" target="_blank" role="button">AD DS</a>
+                    <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/AppProxy" target="_blank" role="button">Application Proxy</a>
+                </div>
+            </div>
+        </div>    
+        <div class="container mb-5">
+            <h3>MS 365 Security</h3> 
+            <div>
+                <button class="btn btn-warning btn-lg m-2" onclick="open365()">365</button>
+            </div>
+            <div>
+                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/incidents" target="_blank" role="button">Active Incidents</a>
+                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/alerts" target="_blank" role="button">Active Alerts</a>
+                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/action-center/pending" target="_blank" role="button">Pending Actions</a>
+                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/threatanalytics3" target="_blank" role="button">Active Threats</a>
+                <a class="btn btn-light btn-lg m-2" href="https://protection.office.com/searchandinvestigation/dashboard" target="_blank" role="button">User Insights</a>
+            </div>
+
+            <h3>MS Defender for Endpoint</h3> 
+            <div>
+                <button class="btn btn-warning btn-lg m-2" onclick="openDefenderEndpoint()">Defender for Endpoint</button>
+            </div>
+            <div>
+                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/machines" target="_blank" role="button">Device Inventory</a>
+                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/configuration-management" target="_blank" role="button">Device Configuration</a>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.cloudappsecurity.com" target="_blank" role="button">Cloud App Security</a>
+            </div>
+            
+
+            <h3>MS Defender for O365</h3> 
+            <div>
+                <button class="btn btn-warning btn-lg m-2" onclick="openDefenderO365()">Defender for O365</button>
+            </div>
+            <div>
+                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/restrictedusers" target="_blank" role="button">Restricted Users</a>
+                <a class="btn btn-light btn-lg m-2" href="https://protection.office.com/mailflow/dashboard" target="_blank" role="button">Mail Flow</a>
+                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/airinvestigation" target="_blank" role="button">Threat Investigation</a>
+                <a class="btn btn-light btn-lg m-2" href="https://protection.office.com/realtimereports" target="_blank" role="button">Real-time detections</a>
+                <a class="btn btn-light btn-lg m-2" href="https://protection.office.com/reportsubmission?viewid=user" target="_blank" role="button">User Submissions</a>
+                <a class="btn btn-light btn-lg m-2" href="https://protection.office.com/quarantine" target="_blank" role="button">Quarantine</a> 
+            </div>
+
+            <h3>Azure Identity Security</h3>
+            <div>
+                <button class="btn btn-warning btn-lg m-2" onclick="openAIS()">AIS</button>
+            </div>
+            <div>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/SecurityMenuBlade/RiskyUsers" target="_blank" role="button">Risky Users</a>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/SecurityMenuBlade/RiskySignIns" target="_blank" role="button">Risky Sign-ins</a>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/SecurityMenuBlade/RiskDetections" target="_blank" role="button">Risk Detections</a>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/SignIns" target="_blank" role="button">All Sign-ins</a>   
+            </div>
+
+            <h3>MS 365 Health</h3>
+            <div>
+                <button class="btn btn-warning btn-lg m-2" onclick="open365Health_Lite()">Lite 365 Health</button>
+                <button class="btn btn-warning btn-lg m-2" onclick="open365Health_All()">All 365 Health</button>
+            </div>
+            <div> 
+                <a class="btn btn-light btn-lg m-2" href="https://admin.microsoft.com/AdminPortal/Home#/servicehealth" target="_blank" role="button">Service health</a>
+                <a class="btn btn-light btn-lg m-2" href="https://admin.microsoft.com/AdminPortal/Home#/MessageCenter" target="_blank" role="button">Message centre</a>
+                <a class="btn btn-light btn-lg m-2" href="https://admin.microsoft.com/#/dirsyncmanagement" target="_blank" role="button">Directory Sync Status</a>  
+                <a class="btn btn-light btn-lg m-2" href="https://www.cyber.gov.au/acsc/view-all-content/alerts" target="_blank" role="button">Cyber Gov</a>    
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Communities</h1>
+        <div class="container">
+            <h3>Azure AD</h3>
+            <div>
+                <button class="btn btn-warning btn-lg m-2" onclick="openAllCommunities()">All Daily</button>
+                <button class="btn btn-warning btn-lg m-2" onclick="openAllCommunitiesWeekly()">All Weekly</button>
+            </div>
+            <div>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/SecurityMenuBlade/RiskyUsers" target="_blank" role="button">Risky users</a>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/SecurityMenuBlade/RiskySignIns" target="_blank" role="button">Risky sign-ins</a>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/SignIns" target="_blank" role="button">Sign-ins</a>
+            </div>
+        </div>
+
+        <div class="container mb-5">
+            <h3>Health and Message</h3> 
+            <a class="btn btn-light btn-lg m-2" href="https://admin.microsoft.com/AdminPortal/Home#/servicehealth" target="_blank" role="button">Service health</a>
+            <a class="btn btn-light btn-lg m-2" href="https://admin.microsoft.com/AdminPortal/Home#/MessageCenter" target="_blank" role="button">Message centre</a>
+
+            <h3>Weekly</h3> 
+            <a class="btn btn-light btn-lg m-2" href="https://admin.exchange.microsoft.com/#/alerts/recentalertsmailflowdetails" target="_blank" role="button">Alerts</a>
+            <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/auditlogsearch?viewid=Test%20Tab" target="_blank" role="button">Audit Logs</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>DoH Application</h1>
+        <div class="container">
+        <div class="container mb-5">
+            <h3>Azure Security Centre</h3>
+            <div>
+                <button class="btn btn-warning btn-lg m-2" onclick="openAzureSecurity()">All Security</button>
+            </div>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/7" target="_blank" role="button">Security Alerts</a>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#@dhhstasmania.onmicrosoft.com/dashboard/private/6167555e-08f5-4b15-bedf-207435ef60c9" target="_blank" role="button">COVIDTesting-Prod-rg</a>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#@dhhstasmania.onmicrosoft.com/dashboard/arm/subscriptions/89eed150-6646-4896-b6bd-28a8c8842bf1/resourceGroups/HealthScreeningForm-Prod-rg/providers/Microsoft.Portal/dashboards/80d29fb2-efb1-44d2-98e9-14ad1a16f4d4" target="_blank" role="button">Health Screening Tool</a>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#@dhhstasmania.onmicrosoft.com/resource/subscriptions/89eed150-6646-4896-b6bd-28a8c8842bf1/resourceGroups/PublicShared-Prod-rg/providers/Microsoft.Web/serverFarms/sharedasp-prod-asp/webHostingPlan" target="_blank" role="button">App Service Plan Health</a>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/5" target="_blank" role="button">Recommendations</a>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/23" target="_blank" role="button">Security Score</a>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/26" target="_blank" role="button">Azure Defender</a>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/22" target="_blank" role="button">Regulatory Compliance</a>
+        </div> 
+    </div>
+
+    <div class="container">
+        <h1>Weekly</h1>
+        <div class="container mb-5">
+            <div>
+                <button class="btn btn-warning btn-lg m-2" onclick="openAllWeekly()">Open Checks</button>
+                <button class="btn btn-warning btn-lg m-2" onclick="openWeeklyReports()">Open Reports</button>
+                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/ReportsForDownload?viewid=custom" target="_blank" role="button">Downloadable Reports</a> 
+            </div>
+                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/reports/SpoofMailReport" target="_blank" role="button">Spoofed mail (Report1)</a> 
+                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/reports/TPSEmailSpamReportATP" target="_blank" role="button">Threat Protection Status - Spam (Report2)</a>
+                <a class="btn btn-light btn-lg m-2" href="https://admin.exchange.microsoft.com/#/reports/transportruledetails" target="_blank" role="button">Exchange transport rules (Report3)</a>
+                <a class="btn btn-light btn-lg m-2" href="https://outlook.office365.com/ecp/Reporting/NonOwnerAccessReport.aspx" target="_blank" role="button">Mailbox access by non-owners</a> 
+                <a class="btn btn-light btn-lg m-2" href="https://admin.exchange.microsoft.com/#/reports/autoforwardedmessages" target="_blank" role="button">Mailbox forwarding rules</a>
+                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/campaigns" target="_blank" role="button">Campaigns</a> 
+                <a class="btn btn-light btn-lg m-2" href="https://protection.office.com/spoofintelligence" target="_blank" role="button">Spoof Intelligence</a> 
+                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/auditlogsearch?viewid=Test%20Tab" target="_blank" role="button">Audit log</a> 
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Monthly</h1>
+        <div class="container mb-5">
+            <div>
+                <button class="btn btn-warning btn-lg m-2" onclick="openMonthly()">Open Monthly</button>
+            </div>
+            <div>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/AllowlistPolicyBlade" target="_blank" role="button">Allowed External Domains</a>
+                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/auditlogsearch" target="_blank" role="button">Anonymous Link Activity Log Search</a>
+                <a class="btn btn-light btn-lg m-2" href="https://admin.microsoft.com/#/rbac/directory" target="_blank" role="button">Export Admin List</a>
+                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/campaigns" target="_blank" role="button">Campaigns Monthly</a>
+                <a class="btn btn-light btn-lg m-2" href="https://admin.microsoft.com/#/subscriptions" target="_blank" role="button">Subscriptions + Upcoming Expiration</a>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/SecurityMenuBlade/IdentitySecureScore" target="_blank" role="button">Identity Improvement Actions</a>
+                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/securescore" target="_blank" role="button">Improvement Actions</a>
+            </div>
+        </div>
+    </div>
+
+<script>
+function openAzureAD_DoTAF() {
+    window.open('https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/AppProxy');
+    window.open('https://portal.azure.com/#blade/Microsoft_Azure_ADHybridHealth/AadHealthMenuBlade/SyncServicesList');
+    window.open('https://portal.azure.com/#blade/Microsoft_Azure_ADHybridHealth/AadHealthMenuBlade/SyncErros');
+    
+}
+
+function openAzureAD_STTAS() {
+    window.open('https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/AppProxy');
+    window.open('https://portal.azure.com/#blade/Microsoft_Azure_ADHybridHealth/AadHealthMenuBlade/AddsServicesList');
+    window.open('https://portal.azure.com/#blade/Microsoft_Azure_ADHybridHealth/AadHealthMenuBlade/AdfsServicesList');
+    window.open('https://portal.azure.com/#blade/Microsoft_Azure_ADHybridHealth/AadHealthMenuBlade/SyncServicesList');
+    window.open('https://portal.azure.com/#blade/Microsoft_Azure_ADHybridHealth/AadHealthMenuBlade/SyncErros');
+}
+
+function open365() {
+    window.open('https://protection.office.com/searchandinvestigation/dashboard');
+    window.open('https://security.microsoft.com/threatanalytics3');
+    window.open('https://security.microsoft.com/action-center/pending');
+    window.open('https://security.microsoft.com/alerts');
+    window.open('https://security.microsoft.com/incidents');   
+}
+
+function openDefenderEndpoint() {
+    window.open('https://portal.cloudappsecurity.com');
+    window.open('https://security.microsoft.com/configuration-management');
+    window.open('https://security.microsoft.com/machines');
+}
+
+function openDefenderO365() {
+    window.open('https://protection.office.com/quarantine');
+    window.open('https://protection.office.com/reportsubmission?viewid=user');
+    window.open('https://protection.office.com/realtimereports');
+    window.open('https://security.microsoft.com/airinvestigation');
+    window.open('https://protection.office.com/mailflow/dashboard');  
+    window.open('https://security.microsoft.com/restrictedusers');   
+}
+
+function openAIS() {
+    window.open('https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/SignIns');
+    window.open('https://portal.azure.com/#blade/Microsoft_AAD_IAM/SecurityMenuBlade/RiskDetections');
+    window.open('https://portal.azure.com/#blade/Microsoft_AAD_IAM/SecurityMenuBlade/RiskySignIns');
+    window.open('https://portal.azure.com/#blade/Microsoft_AAD_IAM/SecurityMenuBlade/RiskyUsers');
+}
+
+function open365Health_Lite() {
+    window.open('https://admin.microsoft.com/#/dirsyncmanagement');
+    window.open('https://admin.microsoft.com/AdminPortal/Home#/MessageCenter');
+    window.open('https://admin.microsoft.com/AdminPortal/Home#/servicehealth');
+}
+
+function open365Health_All() {
+    window.open('https://admin.microsoft.com/#/dirsyncmanagement');
+    window.open('https://admin.microsoft.com/AdminPortal/Home#/MessageCenter');
+    window.open('https://admin.microsoft.com/AdminPortal/Home#/servicehealth');
+    window.open("https://www.cyber.gov.au/acsc/view-all-content/alerts")
+}
+
+function openAllCommunities() {
+    window.open('https://admin.microsoft.com/AdminPortal/Home#/MessageCenter');
+    window.open('https://admin.microsoft.com/AdminPortal/Home#/servicehealth');
+    window.open('https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/SignIns');
+    window.open('https://portal.azure.com/#blade/Microsoft_AAD_IAM/SecurityMenuBlade/RiskySignIns');
+    window.open('https://portal.azure.com/#blade/Microsoft_AAD_IAM/SecurityMenuBlade/RiskyUsers');
+}
+
+function openAllCommunitiesWeekly() {
+    window.open('https://security.microsoft.com/auditlogsearch?viewid=Test%20Tab');
+    window.open('https://admin.exchange.microsoft.com/#/alerts/recentalertsmailflowdetails');
+}
+
+function openAzureSecurity() {
+    window.open('https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/26');
+    window.open('https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/23');
+    window.open('https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/5');
+    window.open("https://portal.azure.com/#@dhhstasmania.onmicrosoft.com/resource/subscriptions/89eed150-6646-4896-b6bd-28a8c8842bf1/resourceGroups/PublicShared-Prod-rg/providers/Microsoft.Web/serverFarms/sharedasp-prod-asp/webHostingPlan");
+    window.open("https://portal.azure.com/#@dhhstasmania.onmicrosoft.com/dashboard/arm/subscriptions/89eed150-6646-4896-b6bd-28a8c8842bf1/resourceGroups/HealthScreeningForm-Prod-rg/providers/Microsoft.Portal/dashboards/80d29fb2-efb1-44d2-98e9-14ad1a16f4d4");
+    window.open("https://portal.azure.com/#@dhhstasmania.onmicrosoft.com/dashboard/private/6167555e-08f5-4b15-bedf-207435ef60c9");
+    window.open('https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/7');
+}
+
+function openAllWeekly() {
+    window.open('https://security.microsoft.com/auditlogsearch?viewid=Test%20Tab');
+    window.open('https://protection.office.com/spoofintelligence');
+    window.open('https://security.microsoft.com/campaigns');
+    window.open('https://admin.exchange.microsoft.com/#/reports/autoforwardedmessages');
+    window.open('https://outlook.office365.com/ecp/Reporting/NonOwnerAccessReport.aspx');
+}
+
+function openWeeklyReports() {
+    window.open('https://admin.exchange.microsoft.com/#/reports/transportruledetails');
+    window.open('https://security.microsoft.com/reports/TPSEmailSpamReportATP');
+    window.open('https://security.microsoft.com/reports/SpoofMailReport');
+}
+
+function openMonthly() {
+    window.open('https://security.microsoft.com/securescore');
+    window.open('https://portal.azure.com/#blade/Microsoft_AAD_IAM/SecurityMenuBlade/IdentitySecureScore');
+    window.open('https://admin.microsoft.com/#/subscriptions');
+    window.open('https://security.microsoft.com/campaigns');
+    window.open('https://admin.microsoft.com/#/rbac/directory');
+    window.open('https://security.microsoft.com/auditlogsearch');
+    window.open('https://portal.azure.com/#blade/Microsoft_AAD_IAM/AllowlistPolicyBlade');
+}
+
+</script>
+
+</body>
+</html> 
