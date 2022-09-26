@@ -94,6 +94,28 @@ a {font-size: 26px;}
     </div>
 
     <div class="container">
+        <h1>DoH Application/TravelToTas</h1>
+        <div class="container">
+        <div class="container mb-5">
+            <h3>Azure Security Centre</h3>
+            <div>
+                <button class="btn btn-warning btn-lg m-2" onclick="openAzureSecurity()">All DoH App Security</button>
+                <button class="btn btn-warning btn-lg m-2" onclick="openTTTSecurity()">All TTT Security</button>
+            </div>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/7" target="_blank" role="button">Security Alerts</a>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#@dhhstasmania.onmicrosoft.com/dashboard/private/6167555e-08f5-4b15-bedf-207435ef60c9" target="_blank" role="button">COVIDTesting-Prod-rg</a>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#@dhhstasmania.onmicrosoft.com/dashboard/arm/subscriptions/89eed150-6646-4896-b6bd-28a8c8842bf1/resourceGroups/HealthScreeningForm-Prod-rg/providers/Microsoft.Portal/dashboards/80d29fb2-efb1-44d2-98e9-14ad1a16f4d4" target="_blank" role="button">Health Screening Tool</a>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#@dhhstasmania.onmicrosoft.com/resource/subscriptions/89eed150-6646-4896-b6bd-28a8c8842bf1/resourceGroups/PublicShared-Prod-rg/providers/Microsoft.Web/serverFarms/sharedasp-prod-asp/webHostingPlan" target="_blank" role="button">App Service Plan Health</a>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/5" target="_blank" role="button">Recommendations</a>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/23" target="_blank" role="button">Security Score</a>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/26" target="_blank" role="button">Azure Defender</a>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/22" target="_blank" role="button">Regulatory Compliance</a>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#@dayonedigital.com.au/dashboard/private/c6191e35-65aa-427f-8f77-c7f1d95c10ec" target="_blank" role="button">Dashboard</a>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#view/Microsoft_Azure_DataProtection/BackupCenterMenuBlade/~/overview" target="_blank" role="button">Backup Center</a>
+        </div> 
+    </div>
+
+    <div class="container">
         <h1>Communities</h1>
         <div class="container">
             <h3>Azure AD</h3>
@@ -117,25 +139,6 @@ a {font-size: 26px;}
             <a class="btn btn-light btn-lg m-2" href="https://admin.exchange.microsoft.com/#/alerts/recentalertsmailflowdetails" target="_blank" role="button">Alerts</a>
             <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/auditlogsearch?viewid=Test%20Tab" target="_blank" role="button">Audit Logs</a>
         </div>
-    </div>
-
-    <div class="container">
-        <h1>DoH Application</h1>
-        <div class="container">
-        <div class="container mb-5">
-            <h3>Azure Security Centre</h3>
-            <div>
-                <button class="btn btn-warning btn-lg m-2" onclick="openAzureSecurity()">All Security</button>
-            </div>
-                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/7" target="_blank" role="button">Security Alerts</a>
-                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#@dhhstasmania.onmicrosoft.com/dashboard/private/6167555e-08f5-4b15-bedf-207435ef60c9" target="_blank" role="button">COVIDTesting-Prod-rg</a>
-                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#@dhhstasmania.onmicrosoft.com/dashboard/arm/subscriptions/89eed150-6646-4896-b6bd-28a8c8842bf1/resourceGroups/HealthScreeningForm-Prod-rg/providers/Microsoft.Portal/dashboards/80d29fb2-efb1-44d2-98e9-14ad1a16f4d4" target="_blank" role="button">Health Screening Tool</a>
-                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#@dhhstasmania.onmicrosoft.com/resource/subscriptions/89eed150-6646-4896-b6bd-28a8c8842bf1/resourceGroups/PublicShared-Prod-rg/providers/Microsoft.Web/serverFarms/sharedasp-prod-asp/webHostingPlan" target="_blank" role="button">App Service Plan Health</a>
-                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/5" target="_blank" role="button">Recommendations</a>
-                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/23" target="_blank" role="button">Security Score</a>
-                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/26" target="_blank" role="button">Azure Defender</a>
-                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/22" target="_blank" role="button">Regulatory Compliance</a>
-        </div> 
     </div>
 
     <div class="container">
@@ -254,6 +257,15 @@ function openAzureSecurity() {
     window.open("https://portal.azure.com/#@dhhstasmania.onmicrosoft.com/resource/subscriptions/89eed150-6646-4896-b6bd-28a8c8842bf1/resourceGroups/PublicShared-Prod-rg/providers/Microsoft.Web/serverFarms/sharedasp-prod-asp/webHostingPlan");
     window.open("https://portal.azure.com/#@dhhstasmania.onmicrosoft.com/dashboard/arm/subscriptions/89eed150-6646-4896-b6bd-28a8c8842bf1/resourceGroups/HealthScreeningForm-Prod-rg/providers/Microsoft.Portal/dashboards/80d29fb2-efb1-44d2-98e9-14ad1a16f4d4");
     window.open("https://portal.azure.com/#@dhhstasmania.onmicrosoft.com/dashboard/private/6167555e-08f5-4b15-bedf-207435ef60c9");
+    window.open('https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/7');
+}
+
+function openTTTSecurity() {
+    window.open('https://portal.azure.com/#view/Microsoft_Azure_DataProtection/BackupCenterMenuBlade/~/overview');
+    window.open('https://portal.azure.com/#@dayonedigital.com.au/dashboard/private/c6191e35-65aa-427f-8f77-c7f1d95c10ec');
+    window.open('https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/26');
+    window.open('https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/23');
+    window.open('https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/5');
     window.open('https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/7');
 }
 
