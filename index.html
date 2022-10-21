@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <title>Daily Monitoring</title>
@@ -142,6 +142,25 @@ a {font-size: 26px;}
     </div>
 
     <div class="container">
+        <h1>Sensys Gatso</h1>
+        <div class="container mb-5">
+            <div>
+                <button class="btn btn-warning btn-lg m-2" onclick="openSensysGatso()">All Sensys Gatso</button>
+            </div>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#@hostedforsensysgatso.onmicrosoft.com/dashboard/arm/subscriptions/39db3c34-cd27-4d60-be60-7abc743c4ff6/resourceGroups/Prod-RG/providers/Microsoft.Portal/dashboards/98c54a5b-8c74-457d-a853-ee1a83a1250a-dashboard" target="_blank" role="button">Kubernetes Dashboard</a> 
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#view/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/~/activityLog" target="_blank" role="button">Resource Health</a>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/5" target="_blank" role="button">Security Centre</a>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_Azure_DataProtection/BackupCenterMenuBlade/overview" target="_blank" role="button">Backup Centre</a> 
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#@hostedforsensysgatso.onmicrosoft.com/resource/subscriptions/39db3c34-cd27-4d60-be60-7abc743c4ff6/resourceGroups/Prod-RG/providers/Microsoft.DBforPostgreSQL/flexibleServers/nsg1proddb-psql/backupAndRestore" target="_blank" role="button">PostgreSQL</a>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#@hostedforsensysgatso.onmicrosoft.com/resource/subscriptions/39db3c34-cd27-4d60-be60-7abc743c4ff6/resourceGroups/Prod-RG/providers/microsoft.insights/components/BackupInsights/searchV1" target="_blank" role="button">Custom Backup</a> 
+                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/vulnerabilities?tid=f1098047-ba53-4ed1-bc5b-0c46e886f44e" target="_blank" role="button">EndPoint Weaknesses</a> 
+                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/machines?category=endpoints&tid=f1098047-ba53-4ed1-bc5b-0c46e886f44e" target="_blank" role="button">EndPoint Device Exposure</a>
+                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/tvm_dashboard?tid=f1098047-ba53-4ed1-bc5b-0c46e886f44e" target="_blank" role="button">EndPoint Dashboard Alerts</a>
+                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/security-recommendations?tid=f1098047-ba53-4ed1-bc5b-0c46e886f44e" target="_blank" role="button">EndPoint Security Recommendations</a> 
+        </div>
+    </div>
+
+    <div class="container">
         <h1>Weekly</h1>
         <div class="container mb-5">
             <div>
@@ -269,6 +288,19 @@ function openTTTSecurity() {
     window.open('https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/7');
 }
 
+function openSensysGatso() {
+    window.open('https://security.microsoft.com/security-recommendations?tid=f1098047-ba53-4ed1-bc5b-0c46e886f44e');
+    window.open('https://security.microsoft.com/tvm_dashboard?tid=f1098047-ba53-4ed1-bc5b-0c46e886f44e');
+    window.open('https://security.microsoft.com/machines?category=endpoints&tid=f1098047-ba53-4ed1-bc5b-0c46e886f44e');
+    window.open('https://security.microsoft.com/vulnerabilities?tid=f1098047-ba53-4ed1-bc5b-0c46e886f44e');
+    window.open('https://portal.azure.com/#@hostedforsensysgatso.onmicrosoft.com/resource/subscriptions/39db3c34-cd27-4d60-be60-7abc743c4ff6/resourceGroups/Prod-RG/providers/microsoft.insights/components/BackupInsights/searchV1');
+    window.open('https://portal.azure.com/#@hostedforsensysgatso.onmicrosoft.com/resource/subscriptions/39db3c34-cd27-4d60-be60-7abc743c4ff6/resourceGroups/Prod-RG/providers/Microsoft.DBforPostgreSQL/flexibleServers/nsg1proddb-psql/backupAndRestore');
+    window.open('https://portal.azure.com/#blade/Microsoft_Azure_DataProtection/BackupCenterMenuBlade/overview');
+    window.open('https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/5');
+    window.open('https://portal.azure.com/#view/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/~/activityLog');
+    window.open('https://portal.azure.com/#@hostedforsensysgatso.onmicrosoft.com/dashboard/arm/subscriptions/39db3c34-cd27-4d60-be60-7abc743c4ff6/resourceGroups/Prod-RG/providers/Microsoft.Portal/dashboards/98c54a5b-8c74-457d-a853-ee1a83a1250a-dashboard');
+}
+
 function openAllWeekly() {
     window.open('https://security.microsoft.com/auditlogsearch?viewid=Test%20Tab');
     window.open('https://protection.office.com/spoofintelligence');
@@ -292,8 +324,6 @@ function openMonthly() {
     window.open('https://security.microsoft.com/auditlogsearch');
     window.open('https://portal.azure.com/#blade/Microsoft_AAD_IAM/AllowlistPolicyBlade');
 }
-
 </script>
-
 </body>
 </html> 
