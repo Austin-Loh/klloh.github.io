@@ -20,6 +20,7 @@ a {font-size: 26px;}
             <div>
                 <div>
                     <button class="btn btn-warning btn-lg m-2" onclick="openAzureAD_DoTAF()">DoTAF</button>
+                    <button class="btn btn-warning btn-lg m-2" onclick="openAzureAD_DoH()">DoH</button>
                     <button class="btn btn-warning btn-lg m-2" onclick="openAzureAD_STTAS()">STTAS</button>
                 </div>
                 <div>
@@ -200,6 +201,13 @@ a {font-size: 26px;}
 <script>
 function openAzureAD_DoTAF() {
     window.open('https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/AppProxy');
+    window.open('https://portal.azure.com/#blade/Microsoft_Azure_ADHybridHealth/AadHealthMenuBlade/SyncServicesList');
+    window.open('https://portal.azure.com/#blade/Microsoft_Azure_ADHybridHealth/AadHealthMenuBlade/SyncErros');
+    
+}
+
+function openAzureAD_DoH() {
+    window.open('https://portal.azure.com/#view/Microsoft_Azure_ADHybridHealth/AadHealthMenuBlade/~/AdfsServicesList');
     window.open('https://portal.azure.com/#blade/Microsoft_Azure_ADHybridHealth/AadHealthMenuBlade/SyncServicesList');
     window.open('https://portal.azure.com/#blade/Microsoft_Azure_ADHybridHealth/AadHealthMenuBlade/SyncErros');
     
