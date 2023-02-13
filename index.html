@@ -117,6 +117,23 @@ a {font-size: 26px;}
     </div>
 
     <div class="container">
+        <h1>DECYP Intranet</h1>
+        <div class="container mb-5">
+            <div>
+                <button class="btn btn-warning btn-lg m-2" onclick="openDECYP()">All DECYP</button>
+            </div>
+                <a class="btn btn-light btn-lg m-2" href="https://tasedu.sharepoint.com/sites/Intranet" target="_blank" role="button">Intranet Homepage</a> 
+                <a class="btn btn-light btn-lg m-2" href="https://tasedu.sharepoint.com/sites/intranet/SitePages/Search/Policies-Library.aspx" target="_blank" role="button">Policies Library</a>
+                <a class="btn btn-light btn-lg m-2" href="https://tasedu.sharepoint.com/sites/intranet/SitePages/Search/Forms-Library.aspx" target="_blank" role="button">Forms Library</a>
+                <a class="btn btn-light btn-lg m-2" href="https://tasedu.sharepoint.com/sites/intranet/SitePages/Search/Template-Library.aspx" target="_blank" role="button">Templates Library</a> 
+                <a class="btn btn-light btn-lg m-2" href="https://tasedu.sharepoint.com/sites/intranet/SitePages/Search/StrategicPlan-Library.aspx" target="_blank" role="button">Strategic Plan Library</a>
+                <a class="btn btn-light btn-lg m-2" href="https://tasedu.sharepoint.com/sites/IntranetAdmins" target="_blank" role="button">Intranet Admins</a> 
+                <a class="btn btn-light btn-lg m-2" href="https://publicdoccentreapi-aso-prod-app.scm.azurewebsites.net/azurejobs/#/jobs/triggered/PublicDocumentSync" target="_blank" role="button">Public Document Sync</a> 
+                <a class="btn btn-light btn-lg m-2" href="https://tasedu.sharepoint.com/sites/IntranetHealthCheckSite/SitePages/Test-Calendar.aspx" target="_blank" role="button">Test Reach Calendar</a>
+        </div>
+    </div>
+
+    <div class="container">
         <h1>Communities</h1>
         <div class="container">
             <h3>Azure AD</h3>
@@ -308,6 +325,18 @@ function openSensysGatso() {
     window.open('https://portal.azure.com/#view/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/~/activityLog');
     window.open('https://portal.azure.com/#@hostedforsensysgatso.onmicrosoft.com/dashboard/arm/subscriptions/39db3c34-cd27-4d60-be60-7abc743c4ff6/resourcegroups/shared-rg/providers/microsoft.portal/dashboards/1dada4a6-6908-482b-a65b-2cdab15034d0');
 }
+
+function openDECYP() {
+    window.open('https://tasedu.sharepoint.com/sites/IntranetHealthCheckSite/SitePages/Test-Calendar.aspx')
+    window.open('https://publicdoccentreapi-aso-prod-app.scm.azurewebsites.net/azurejobs/#/jobs/triggered/PublicDocumentSync')
+    window.open('https://tasedu.sharepoint.com/sites/IntranetAdmins')
+    window.open('https://tasedu.sharepoint.com/sites/intranet/SitePages/Search/StrategicPlan-Library.aspx')
+    window.open('https://tasedu.sharepoint.com/sites/intranet/SitePages/Search/Template-Library.aspx')
+    window.open('https://tasedu.sharepoint.com/sites/intranet/SitePages/Search/Forms-Library.aspx')
+    window.open('https://tasedu.sharepoint.com/sites/intranet/SitePages/Search/Policies-Library.aspx')
+    window.open('https://tasedu.sharepoint.com/sites/Intranet')
+}
+
 
 function openAllWeekly() {
     window.open('https://security.microsoft.com/auditlogsearch?viewid=Test%20Tab');
