@@ -180,10 +180,14 @@ a {font-size: 26px;}
         <div class="container mb-5">
             <div>
                 <button class="btn btn-warning btn-lg m-2" onclick="openSensysGatso()">All Sensys Gatso</button>
+                <button class="btn btn-warning btn-lg m-2" onclick="openSensysGatsoWeekly()">All Sensys Gatso Weekly</button>
+                <p id="reminder"></p>
             </div>
                 <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#@hostedforsensysgatso.onmicrosoft.com/dashboard/arm/subscriptions/39db3c34-cd27-4d60-be60-7abc743c4ff6/resourcegroups/shared-rg/providers/microsoft.portal/dashboards/1dada4a6-6908-482b-a65b-2cdab15034d0" target="_blank" role="button">Kubernetes Dashboard</a> 
                 <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#view/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/~/activityLog" target="_blank" role="button">Resource Health</a>
                 <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/5" target="_blank" role="button">Security Centre</a>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/7" target="_blank" role="button">Security Alerts</a>
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/23" target="_blank" role="button">Security Score</a>
                 <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_Azure_DataProtection/BackupCenterMenuBlade/overview" target="_blank" role="button">Backup Centre</a> 
                 <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#@hostedforsensysgatso.onmicrosoft.com/resource/subscriptions/39db3c34-cd27-4d60-be60-7abc743c4ff6/resourceGroups/Prod-RG/providers/Microsoft.DBforPostgreSQL/flexibleServers/nsg1proddb-psql/backupAndRestore" target="_blank" role="button">PostgreSQL</a>
                 <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#@hostedforsensysgatso.onmicrosoft.com/resource/subscriptions/39db3c34-cd27-4d60-be60-7abc743c4ff6/resourceGroups/Prod-RG/providers/microsoft.insights/components/BackupInsights/searchV1" target="_blank" role="button">Custom Backup</a> 
@@ -191,7 +195,7 @@ a {font-size: 26px;}
                 <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/machines?category=endpoints&tid=f1098047-ba53-4ed1-bc5b-0c46e886f44e" target="_blank" role="button">EndPoint Device Exposure</a>
                 <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/tvm_dashboard?tid=f1098047-ba53-4ed1-bc5b-0c46e886f44e" target="_blank" role="button">EndPoint Dashboard Alerts</a>
                 <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/security-recommendations?tid=f1098047-ba53-4ed1-bc5b-0c46e886f44e" target="_blank" role="button">EndPoint Security Recommendations</a> 
-        </div>
+            </div>
     </div>
 
     <div class="container">
@@ -337,9 +341,19 @@ function openSensysGatso() {
     window.open('https://portal.azure.com/#@hostedforsensysgatso.onmicrosoft.com/resource/subscriptions/39db3c34-cd27-4d60-be60-7abc743c4ff6/resourceGroups/Prod-RG/providers/microsoft.insights/components/BackupInsights/searchV1');
     window.open('https://portal.azure.com/#@hostedforsensysgatso.onmicrosoft.com/resource/subscriptions/39db3c34-cd27-4d60-be60-7abc743c4ff6/resourceGroups/Prod-RG/providers/Microsoft.DBforPostgreSQL/flexibleServers/nsg1proddb-psql/backupAndRestore');
     window.open('https://portal.azure.com/#blade/Microsoft_Azure_DataProtection/BackupCenterMenuBlade/overview');
+    window.open('https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/23');
+    window.open('https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/7');
     window.open('https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/5');
     window.open('https://portal.azure.com/#view/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/~/activityLog');
     window.open('https://portal.azure.com/#@hostedforsensysgatso.onmicrosoft.com/dashboard/arm/subscriptions/39db3c34-cd27-4d60-be60-7abc743c4ff6/resourcegroups/shared-rg/providers/microsoft.portal/dashboards/1dada4a6-6908-482b-a65b-2cdab15034d0');
+}
+
+function openSensysGatsoWeekly() {
+    document.getElementById("reminder").innerHTML = "Run PowerShell Script OpenVPN-CheckUpdates.ps1";
+    window.open('https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/5');
+    window.open('https://portal.azure.com/#@hostedforsensysgatso.onmicrosoft.com/resource/subscriptions/39db3c34-cd27-4d60-be60-7abc743c4ff6/resourceGroups/Prod-RG/providers/Microsoft.ContainerService/managedClusters/ProdCluster-AKS/nodePools');
+    window.open('https://portal.azure.com/#@hostedforsensysgatso.onmicrosoft.com/resource/subscriptions/39db3c34-cd27-4d60-be60-7abc743c4ff6/resourceGroups/Test-RG/providers/Microsoft.ContainerService/managedClusters/TestCluster-AKS/nodePools');
+    window.open('https://portal.azure.com/#@hostedforsensysgatso.onmicrosoft.com/resource/subscriptions/39db3c34-cd27-4d60-be60-7abc743c4ff6/resourceGroups/test-rg/providers/Microsoft.Compute/virtualMachines/TestJumpbox-VM/unifiedUpdateManagement');
 }
 
 function openDECYP() {
