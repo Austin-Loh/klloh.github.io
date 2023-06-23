@@ -181,6 +181,8 @@ a {font-size: 26px;}
             <div>
                 <button class="btn btn-warning btn-lg m-2" onclick="openSensysGatso()">All Sensys Gatso</button>
                 <button class="btn btn-warning btn-lg m-2" onclick="openSensysGatsoWeekly()">All Sensys Gatso Weekly</button>
+            </div>
+            <div>
                 <p id="reminder"></p>
             </div>
                 <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#@hostedforsensysgatso.onmicrosoft.com/dashboard/arm/subscriptions/39db3c34-cd27-4d60-be60-7abc743c4ff6/resourcegroups/shared-rg/providers/microsoft.portal/dashboards/1dada4a6-6908-482b-a65b-2cdab15034d0" target="_blank" role="button">Kubernetes Dashboard</a> 
@@ -349,7 +351,7 @@ function openSensysGatso() {
 }
 
 function openSensysGatsoWeekly() {
-    document.getElementById("reminder").innerHTML = "Run PowerShell Script OpenVPN-CheckUpdates.ps1";
+    document.getElementById("reminder").innerHTML = "<span style='color: red;'>Run PowerShell Script OpenVPN-CheckUpdates.ps1</span";
     window.open('https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/5');
     window.open('https://portal.azure.com/#@hostedforsensysgatso.onmicrosoft.com/resource/subscriptions/39db3c34-cd27-4d60-be60-7abc743c4ff6/resourceGroups/Prod-RG/providers/Microsoft.ContainerService/managedClusters/ProdCluster-AKS/nodePools');
     window.open('https://portal.azure.com/#@hostedforsensysgatso.onmicrosoft.com/resource/subscriptions/39db3c34-cd27-4d60-be60-7abc743c4ff6/resourceGroups/Test-RG/providers/Microsoft.ContainerService/managedClusters/TestCluster-AKS/nodePools');
