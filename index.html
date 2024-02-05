@@ -14,7 +14,8 @@ a {font-size: 26px;}
 </head>
 <body>
     <div class="container">
-        <h1>Health / Treasury / STTAS</h1>
+        <h1>Health / Treasury / STTAS / DPFEM</h1>
+        <button class="btn btn-warning btn-lg m-2" href="https://portal.azure.com/?feature.msaljs=true#view/Microsoft_Azure_PIMCommon/ActivationMenuBlade/~/aadmigratedroles/provider/aadroles">DPFEM PIM</button>
         <div class="container">
             <h3>Azure AD Connect</h3>
             <div>
@@ -22,6 +23,7 @@ a {font-size: 26px;}
                     <button class="btn btn-warning btn-lg m-2" onclick="openAzureAD_DoTAF()">DoTAF</button>
                     <button class="btn btn-warning btn-lg m-2" onclick="openAzureAD_DoH()">DoH</button>
                     <button class="btn btn-warning btn-lg m-2" onclick="openAzureAD_STTAS()">STTAS</button>
+                    <button class="btn btn-warning btn-lg m-2" onclick="openAzureAD_DPFEM()">DPFEM</button>
                 </div>
                 <div>
                     <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#view/Microsoft_Azure_ADHybridHealth/AadHealthMenuBlade/~/SyncErrors" target="_blank" role="button">Sync Errors</a>
@@ -126,7 +128,6 @@ a {font-size: 26px;}
                 <a class="btn btn-light btn-lg m-2" href="https://tasedu.sharepoint.com/sites/intranet/SitePages/Search/Policies-Library.aspx" target="_blank" role="button">Policies Library</a>
                 <a class="btn btn-light btn-lg m-2" href="https://tasedu.sharepoint.com/sites/intranet/SitePages/Search/Forms-Library.aspx" target="_blank" role="button">Forms Library</a>
                 <a class="btn btn-light btn-lg m-2" href="https://tasedu.sharepoint.com/sites/intranet/SitePages/Search/Template-Library.aspx" target="_blank" role="button">Templates Library</a> 
-                <a class="btn btn-light btn-lg m-2" href="https://tasedu.sharepoint.com/sites/intranet/SitePages/Search/StrategicPlan-Library.aspx" target="_blank" role="button">Strategic Plan Library</a>
                 <a class="btn btn-light btn-lg m-2" href="https://publicdoccentreapi-aso-prod-app.scm.azurewebsites.net/azurejobs/#/jobs/triggered/PublicDocumentSync" target="_blank" role="button">Public Document Sync</a> 
                 <a class="btn btn-light btn-lg m-2" href="https://tasedu.sharepoint.com/sites/IntranetHealthCheckSite/SitePages/Test-Calendar.aspx" target="_blank" role="button">Test Reach Calendar</a>
 
@@ -257,13 +258,17 @@ function openAzureAD_DoH() {
     window.open('https://portal.azure.com/#view/Microsoft_Azure_ADHybridHealth/AadHealthMenuBlade/~/AdfsServicesList');
     window.open('https://portal.azure.com/#blade/Microsoft_Azure_ADHybridHealth/AadHealthMenuBlade/SyncServicesList');
     window.open('https://portal.azure.com/#view/Microsoft_Azure_ADHybridHealth/AadHealthMenuBlade/~/SyncErrors');
-    
 }
 
 function openAzureAD_STTAS() {
     window.open('https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/AppProxy');
     window.open('https://portal.azure.com/#blade/Microsoft_Azure_ADHybridHealth/AadHealthMenuBlade/AddsServicesList');
     window.open('https://portal.azure.com/#blade/Microsoft_Azure_ADHybridHealth/AadHealthMenuBlade/AdfsServicesList');
+    window.open('https://portal.azure.com/#blade/Microsoft_Azure_ADHybridHealth/AadHealthMenuBlade/SyncServicesList');
+    window.open('https://portal.azure.com/#view/Microsoft_Azure_ADHybridHealth/AadHealthMenuBlade/~/SyncErrors');
+}
+
+function openAzureAD_DPFEM() {
     window.open('https://portal.azure.com/#blade/Microsoft_Azure_ADHybridHealth/AadHealthMenuBlade/SyncServicesList');
     window.open('https://portal.azure.com/#view/Microsoft_Azure_ADHybridHealth/AadHealthMenuBlade/~/SyncErrors');
 }
@@ -283,7 +288,6 @@ function openDefenderEndpoint() {
 }
 
 function openDefenderO365() {
-    window.open('https://security.microsoft.com/quarantine');
     window.open('https://security.microsoft.com/reportsubmission?viewid=user');
     window.open('https://security.microsoft.com/realtimereports');
     window.open('https://security.microsoft.com/airinvestigation');
@@ -369,7 +373,6 @@ function openSensysGatsoWeekly() {
 function openDECYP() {
     window.open('https://tasedu.sharepoint.com/sites/IntranetHealthCheckSite/SitePages/Test-Calendar.aspx')
     window.open('https://publicdoccentreapi-aso-prod-app.scm.azurewebsites.net/azurejobs/#/jobs/triggered/PublicDocumentSync')
-    window.open('https://tasedu.sharepoint.com/sites/intranet/SitePages/Search/StrategicPlan-Library.aspx')
     window.open('https://tasedu.sharepoint.com/sites/intranet/SitePages/Search/Template-Library.aspx')
     window.open('https://tasedu.sharepoint.com/sites/intranet/SitePages/Search/Forms-Library.aspx')
     window.open('https://tasedu.sharepoint.com/sites/intranet/SitePages/Search/Policies-Library.aspx')
