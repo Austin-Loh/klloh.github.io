@@ -53,8 +53,8 @@ a {font-size: 26px;}
             </div>
             <div>
                 <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/machines" target="_blank" role="button">Device Inventory</a>
-                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/configuration-management" target="_blank" role="button">Device Configuration</a>
-                <a class="btn btn-light btn-lg m-2" href="https://portal.cloudappsecurity.com" target="_blank" role="button">Cloud App Security</a>
+                <a class="btn btn-light btn-lg m-2" href="https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/NonCompliantDevicesReport.ReactView" target="_blank" role="button">Device Configuration</a>
+                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/incidents" target="_blank" role="button">Cloud App Security</a>
             </div>
             
 
@@ -283,7 +283,6 @@ function openAzureAD_DoH() {
 function openAzureAD_STTAS() {
     window.open('https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/AppProxy');
     window.open('https://portal.azure.com/#blade/Microsoft_Azure_ADHybridHealth/AadHealthMenuBlade/AddsServicesList');
-    window.open('https://portal.azure.com/#blade/Microsoft_Azure_ADHybridHealth/AadHealthMenuBlade/AdfsServicesList');
     window.open('https://portal.azure.com/#blade/Microsoft_Azure_ADHybridHealth/AadHealthMenuBlade/SyncServicesList');
     window.open('https://portal.azure.com/#view/Microsoft_Azure_ADHybridHealth/AadHealthMenuBlade/~/SyncErrors');
 }
@@ -302,8 +301,8 @@ function open365() {
 }
 
 function openDefenderEndpoint() {
-    window.open('https://portal.cloudappsecurity.com');
-    window.open('https://security.microsoft.com/configuration-management');
+    window.open('https://security.microsoft.com/incidents');
+    window.open('https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/NonCompliantDevicesReport.ReactView');
     window.open('https://security.microsoft.com/machines');
 }
 
