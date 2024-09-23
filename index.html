@@ -233,6 +233,7 @@ a {font-size: 26px;}
         <h1>Weekly</h1>
         <div class="container mb-5">
             <div>
+                <button class="btn btn-warning btn-lg m-2" onclick="openNewWeekly()">Open Checks</button>
                 <button class="btn btn-warning btn-lg m-2" onclick="openAllWeekly()">Open Checks</button>
                 <button class="btn btn-warning btn-lg m-2" onclick="openWeeklyReports()">Open Reports</button>
                 <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/ReportsForDownload?viewid=custom" target="_blank" role="button">Downloadable Reports</a> 
@@ -245,6 +246,10 @@ a {font-size: 26px;}
                 <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/campaigns" target="_blank" role="button">Campaigns</a> 
                 <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/spoofintelligence" target="_blank" role="button">Spoof Intelligence</a> 
                 <a class="btn btn-light btn-lg m-2" href="https://purview.microsoft.com/audit/auditsearch" target="_blank" role="button">Audit log</a> 
+            <div>
+                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/securescore?viewid=overview" target="_blank" role="button">Microsoft Secure Score</a> 
+                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#view/Microsoft_AAD_IAM/SecurityMenuBlade/~/IdentitySecureScore" target="_blank" role="button">Identity Secure Score</a>
+            </div>
         </div>
     </div>
 
@@ -403,6 +408,10 @@ function openUTAS() {
     window.open('https://universitytasmania.sharepoint.com/sites/intranet/')
 }
 
+function openNewWeekly() {
+    window.open('https://portal.azure.com/#view/Microsoft_AAD_IAM/SecurityMenuBlade/~/IdentitySecureScore');
+    window.open('\https://security.microsoft.com/securescore?viewid=overview');
+}
 
 function openAllWeekly() {
     window.open('https://purview.microsoft.com/audit/auditsearch');
