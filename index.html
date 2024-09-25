@@ -44,7 +44,6 @@ a {font-size: 26px;}
                 <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/alerts" target="_blank" role="button">Active Alerts</a>
                 <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/action-center/pending" target="_blank" role="button">Pending Actions</a>
                 <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/threatanalytics3" target="_blank" role="button">Active Threats</a>
-                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/threatinteldashboard" target="_blank" role="button">User Insights</a>
             </div>
 
             <h3>MS Defender for Endpoint</h3> 
@@ -90,7 +89,6 @@ a {font-size: 26px;}
             <div> 
                 <a class="btn btn-light btn-lg m-2" href="https://admin.microsoft.com/AdminPortal/Home#/servicehealth" target="_blank" role="button">Service health</a>
                 <a class="btn btn-light btn-lg m-2" href="https://admin.microsoft.com/AdminPortal/Home#/MessageCenter" target="_blank" role="button">Message centre</a>
-                <a class="btn btn-light btn-lg m-2" href="https://admin.microsoft.com/#/dirsyncmanagement" target="_blank" role="button">Directory Sync Status</a>  
                 <a class="btn btn-light btn-lg m-2" href="https://www.cyber.gov.au/acsc/view-all-content/alerts" target="_blank" role="button">Cyber Gov</a>    
             </div>
         </div>
@@ -233,19 +231,8 @@ a {font-size: 26px;}
         <h1>Weekly</h1>
         <div class="container mb-5">
             <div>
-                <button class="btn btn-warning btn-lg m-2" onclick="openNewWeekly()">Open Checks</button>
-                <button class="btn btn-warning btn-lg m-2" onclick="openAllWeekly()">Open Checks</button>
-                <button class="btn btn-warning btn-lg m-2" onclick="openWeeklyReports()">Open Reports</button>
-                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/ReportsForDownload?viewid=custom" target="_blank" role="button">Downloadable Reports</a> 
+                <button class="btn btn-warning btn-lg m-2" onclick="openNewWeekly()">Open Secure Score Checks</button>
             </div>
-                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/reports/SpoofMailReport" target="_blank" role="button">Spoofed mail (Report1)</a> 
-                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/reports/TPSEmailSpamReportATP" target="_blank" role="button">Threat Protection Status - Spam (Report2)</a>
-                <a class="btn btn-light btn-lg m-2" href="https://admin.exchange.microsoft.com/#/reports/transportruledetails" target="_blank" role="button">Exchange transport rules (Report3)</a>
-                <a class="btn btn-light btn-lg m-2" href="https://outlook.office365.com/ecp/Reporting/NonOwnerAccessReport.aspx" target="_blank" role="button">Mailbox access by non-owners</a> 
-                <a class="btn btn-light btn-lg m-2" href="https://admin.exchange.microsoft.com/#/reports/autoforwardedmessages" target="_blank" role="button">Mailbox forwarding rules</a>
-                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/campaigns" target="_blank" role="button">Campaigns</a> 
-                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/spoofintelligence" target="_blank" role="button">Spoof Intelligence</a> 
-                <a class="btn btn-light btn-lg m-2" href="https://purview.microsoft.com/audit/auditsearch" target="_blank" role="button">Audit log</a> 
             <div>
                 <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/securescore?viewid=overview" target="_blank" role="button">Microsoft Secure Score</a> 
                 <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#view/Microsoft_AAD_IAM/SecurityMenuBlade/~/IdentitySecureScore" target="_blank" role="button">Identity Secure Score</a>
@@ -258,6 +245,9 @@ a {font-size: 26px;}
         <div class="container mb-5">
             <div>
                 <button class="btn btn-warning btn-lg m-2" onclick="openMonthly()">Open Monthly</button>
+                <button class="btn btn-warning btn-lg m-2" onclick="openMailMonthly()">Open Mail Security Checks</button>
+                <button class="btn btn-warning btn-lg m-2" onclick="openReport()">Open Reports</button>
+                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/ReportsForDownload?viewid=custom" target="_blank" role="button">Downloadable Reports</a> 
             </div>
             <div>
                 <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/AllowlistPolicyBlade" target="_blank" role="button">Allowed External Domains</a>
@@ -265,8 +255,15 @@ a {font-size: 26px;}
                 <a class="btn btn-light btn-lg m-2" href="https://admin.microsoft.com/#/rbac/directory" target="_blank" role="button">Export Admin List</a>
                 <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/campaigns" target="_blank" role="button">Campaigns Monthly</a>
                 <a class="btn btn-light btn-lg m-2" href="https://admin.microsoft.com/#/subscriptions" target="_blank" role="button">Subscriptions + Upcoming Expiration</a>
-                <a class="btn btn-light btn-lg m-2" href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/SecurityMenuBlade/IdentitySecureScore" target="_blank" role="button">Identity Improvement Actions</a>
-                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/securescore" target="_blank" role="button">Improvement Actions</a>
+            </div>
+            <div>
+                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/reports/SpoofMailReport" target="_blank" role="button">Spoofed mail (Report1)</a> 
+                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/reports/TPSEmailSpamReportATP" target="_blank" role="button">Threat Protection Status - Spam (Report2)</a>
+                <a class="btn btn-light btn-lg m-2" href="https://admin.exchange.microsoft.com/#/reports/transportruledetails" target="_blank" role="button">Exchange transport rules (Report3)</a>
+                <a class="btn btn-light btn-lg m-2" href="https://admin.exchange.microsoft.com/#/reports/autoforwardedmessages" target="_blank" role="button">Mailbox forwarding rules</a>
+                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/campaigns" target="_blank" role="button">Campaigns</a> 
+                <a class="btn btn-light btn-lg m-2" href="https://security.microsoft.com/spoofintelligence" target="_blank" role="button">Spoof Intelligence</a> 
+                <a class="btn btn-light btn-lg m-2" href="https://purview.microsoft.com/audit/auditsearch" target="_blank" role="button">Audit log</a> 
             </div>
         </div>
     </div>
@@ -298,7 +295,6 @@ function openAzureAD_DPFEM() {
 }
 
 function open365() {
-    window.open('https://security.microsoft.com/threatinteldashboard');
     window.open('https://security.microsoft.com/threatanalytics3');
     window.open('https://security.microsoft.com/action-center/pending');
     window.open('https://security.microsoft.com/alerts');
@@ -327,13 +323,11 @@ function openAIS() {
 }
 
 function open365Health_Lite() {
-    window.open('https://admin.microsoft.com/#/dirsyncmanagement');
     window.open('https://admin.microsoft.com/AdminPortal/Home#/MessageCenter');
     window.open('https://admin.microsoft.com/AdminPortal/Home#/servicehealth');
 }
 
 function open365Health_All() {
-    window.open('https://admin.microsoft.com/#/dirsyncmanagement');
     window.open('https://admin.microsoft.com/AdminPortal/Home#/MessageCenter');
     window.open('https://admin.microsoft.com/AdminPortal/Home#/servicehealth');
     window.open("https://www.cyber.gov.au/acsc/view-all-content/alerts")
@@ -413,23 +407,20 @@ function openNewWeekly() {
     window.open('\https://security.microsoft.com/securescore?viewid=overview');
 }
 
-function openAllWeekly() {
+function openMailMonthly() {
     window.open('https://purview.microsoft.com/audit/auditsearch');
     window.open('https://security.microsoft.com/spoofintelligence');
     window.open('https://security.microsoft.com/campaigns');
     window.open('https://admin.exchange.microsoft.com/#/reports/autoforwardedmessages');
-    window.open('https://outlook.office365.com/ecp/Reporting/NonOwnerAccessReport.aspx');
 }
 
-function openWeeklyReports() {
+function openReport() {
     window.open('https://admin.exchange.microsoft.com/#/reports/transportruledetails');
     window.open('https://security.microsoft.com/reports/TPSEmailSpamReportATP');
     window.open('https://security.microsoft.com/reports/SpoofMailReport');
 }
 
 function openMonthly() {
-    window.open('https://security.microsoft.com/securescore');
-    window.open('https://portal.azure.com/#blade/Microsoft_AAD_IAM/SecurityMenuBlade/IdentitySecureScore');
     window.open('https://admin.microsoft.com/#/subscriptions');
     window.open('https://security.microsoft.com/campaigns');
     window.open('https://admin.microsoft.com/#/rbac/directory');
